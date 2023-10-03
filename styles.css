@@ -1,12 +1,16 @@
 /*GLOBAL*/
 * {
     box-sizing: border-box;
+    /* --graphite-black:#292626; */
+    --graphite-black:#292626;
+    --white-default:#fff;
+    --red-default:#E31E24;
 }
 
 body {
     margin: 0;
     padding: 0;
-    background-color: #292626;
+    background-color: var(--white-default);
     font-family: 'Roboto', sans-serif;
 }
 
@@ -19,9 +23,12 @@ header {
     height: 80px;
 
     padding: 0 10px;
+    
+    background-color:var(--graphite-black);
+
 }
 
-button {
+.call-to-action {
     font-family: 'Sedgwick Ave Display', cursive;
 }
 
@@ -66,3 +73,125 @@ nav ul li a {
 }
 
 /*HERO*/
+div.hero{
+    height:40vh;
+
+    background-image:url('./assets/gorillaz-hero.jpg');
+    background-repeat:no-repeat;
+    background-size:cover;
+    position: relative;
+    
+}
+
+div.hero-content{
+    background-color:#000000a2;
+    position:absolute;
+    width:100%;
+    height:100%;
+
+    color:#fff;
+
+    padding:0 50px;
+}
+
+div.hero-content h1{
+    font-size: 62px;
+    margin-bottom: 0;
+}
+
+div.hero-content p{
+    font-size:24px;
+    margin-top:10px;
+}
+
+div.hero-content a{
+    display:inline-block;
+    margin-top:10px;
+    text-decoration:none;
+    background:#fff;
+
+    padding:10px 20px;
+
+    border-radius:5px;
+
+    color:#000;
+
+    font-size:18px;
+}
+
+/*ABOUT-BAND*/
+
+div.about-band{
+    display:grid;
+    align-items:start;
+    justify-content:space-between;
+
+    grid-template-columns:1fr 1fr 1fr;
+
+    column-gap:6%;
+
+    position: relative;
+
+    background:#fff;
+    height:40vh;
+    z-index: -1;
+
+    padding:30px 50px;
+}
+
+
+div.about-band h2{
+    margin:0;
+    font-size:36px;
+
+    margin-bottom:16px;
+}
+
+div.about-band p{
+    font-size:18px;
+    line-height:30px;
+    margin: 0;
+}
+
+div.about-band div.members{
+    display:grid;
+    grid-template-columns:200px 200px;
+    grid-template-rows:240px 240px;
+
+    column-gap:18px;
+    row-gap:18px;
+}
+div.about-band div.members.virtual-members{
+    grid-template-rows:160px 160px;
+}
+
+
+div.about-band div.members img{ 
+    position: relative;
+    top:150px;
+    /* rotate:180deg; */
+}
+
+div.about-band div.members div.member{
+    display:flex;
+    align-items:end;
+    justify-content:center;
+    width:100%;
+    height:100%;
+
+    background-size:cover;
+}
+
+div.about-band div.members div.member span.name{
+    font-weight: bolder;
+    font-size:16px;
+    color: #fff;
+
+    padding:2.5px 0;
+
+    display:block;
+    width: 100%;
+    text-align:center;
+
+    background-color:#00000062;
+}
